@@ -14,7 +14,7 @@ short int contagem = 10;
 #define DAC_PIN 26
 #define SAMPLE_RATE 14500
 
-const char *audioFilePath = "/biombo1.raw";
+const char *audioFilePath = "/audio.raw";
 File audioFile;
 
 SPIClass spi = SPIClass(VSPI);
