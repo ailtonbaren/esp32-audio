@@ -1,7 +1,7 @@
 # esp32-audio
 
 # Requirements
-* **a**
+* **test**
 
 # Compiling and running using ´´arduino-cli´´
 
