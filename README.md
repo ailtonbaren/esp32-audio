@@ -1,4 +1,4 @@
-# ESP32 Audio Sensor
+# esp32-audio
 
 A simple project that uses an **ESP32-DevKit** with an **HC-SR04 ultrasonic sensor** to detect approaching objects and play audio files stored on an **SD card module**.
 
