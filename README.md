@@ -1,17 +1,19 @@
-# esp32-audio
-This project uses the ESP32-DevKit
+# ESP32 Audio Sensor
 
-**work-in-progress**
+A simple project that uses an **ESP32-DevKit** with an **HC-SR04 ultrasonic sensor** to detect approaching objects and play audio files stored on an **SD card module**.
 
-# Compiling and running using arduino-cli
-you can simply run the bash file to compile and run the code.
-```Bash
-./ardcompile
+## Requirements
+- ESP32-DevKit board  
+- HC-SR04 ultrasonic sensor  
+- SD card module + microSD card
+- Arduino CLI or Arduino IDE
+---
 
-# and then
-
-./ardrun
-```
-
-* to-do
-#
+## Installation & Usage
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/ailtonbaren/esp32-audio.git
+   cd esp32-audio
+2. Compile and run:
+    ```bash
+    ./ardcompile && ./ardrun
