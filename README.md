@@ -8,7 +8,7 @@ A simple project that uses an **ESP32-DevKit** with an **HC-SR04 ultrasonic sens
 - SD card module + microSD card
 - Arduino CLI or Arduino IDE
 ---
-.
+
 ## Installation & Usage
 1. Clone the repository:
     ```bash
