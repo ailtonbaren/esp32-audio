@@ -2,18 +2,16 @@
 #include <SD.h>
 
 #define DAC_PIN 26
+#define SAMPLE_RATE 14500
+
+#define TRIG_PIN 14
+#define ECHO_PIN 27
+#define SOUND_SPEED 0.034
 
 #define CS    5
 #define SCK   18
 #define MISO  19
 #define MOSI  23
-
-#define trigPin 14
-#define echoPin 27
-
-#define SOUND_SPEED 0.034
-
-#define SAMPLE_RATE 14500
 
 const char *audioFilePath = "/audio.raw";
 File audioFile;
@@ -31,8 +29,8 @@ bool isPlaying = false;
 void setup() {
     Serial.begin(115200);
 
-    pinMode(trigPin, OUTPUT);
-    pinMode(echoPin, INPUT);
+    pinMode(TRIG_PIN, OUTPUT);
+    pinMode(ECHO_PIN, INPUT);
 
     spi.begin(SCK, MISO, MOSI, CS);
 
@@ -52,13 +50,13 @@ void setup() {
 }
 
 void loop() {
-    digitalWrite(trigPin, LOW);
+    digitalWrite(TRIG_PIN, LOW);
     delayMicroseconds(2);
-    digitalWrite(trigPin, HIGH);
+    digitalWrite(TRIG_PIN, HIGH);
     delayMicroseconds(10);
-    digitalWrite(trigPin, LOW);
+    digitalWrite(TRIG_PIN, LOW);
 
-    duration = pulseIn(echoPin, HIGH);
+    duration = pulseIn(ECHO_PIN, HIGH);
     distanceCm = duration * SOUND_SPEED / 2;
 
     Serial.print("Distância: ");
@@ -84,7 +82,6 @@ void loop() {
             }
         }
     }
-
     delay(200);
 }
 
@@ -100,13 +97,13 @@ void playAudio() {
     lastAbove30Time = millis();
 
     while (audioFile.available()) {
-        digitalWrite(trigPin, LOW);
+        digitalWrite(TRIG_PIN, LOW);
         delayMicroseconds(2);
-        digitalWrite(trigPin, HIGH);
+        digitalWrite(TRIG_PIN, HIGH);
         delayMicroseconds(10);
-        digitalWrite(trigPin, LOW);
+        digitalWrite(TRIG_PIN, LOW);
 
-        duration = pulseIn(echoPin, HIGH, 25000);
+        duration = pulseIn(ECHO_PIN, HIGH, 25000);
         distanceCm = duration * SOUND_SPEED / 2;
 
         if (distanceCm > 30.0) {
