@@ -108,7 +108,9 @@ void playAudio() {
 
         if (distanceCm > 30.0) {
             if (millis() - lastAbove30Time > timer10) {
-                Serial.println("Distância > 30 cm por %d. Interrompendo áudio...", timer10);
+                Serial.print("Distância > 30 cm por ");
+                Serial.print(timer10);
+                Serial.println(". Interrompendo áudio...");
                 break;
             }
         } else {

@@ -1,0 +1,9 @@
+
+[92mUsed library[0m [92mVersion[0m [90mPath[0m
+[93mSPI[0m          3.3.2   [90m/home/dynnob/.arduino15/packages/esp32/hardware/esp32/3.3.2/libraries/SPI[0m
+[93mSD[0m           3.3.2   [90m/home/dynnob/.arduino15/packages/esp32/hardware/esp32/3.3.2/libraries/SD[0m
+[93mFS[0m           3.3.2   [90m/home/dynnob/.arduino15/packages/esp32/hardware/esp32/3.3.2/libraries/FS[0m
+
+[92mUsed platform[0m [92mVersion[0m [90mPath[0m
+[93mesp32:esp32[0m   3.3.2   [90m/home/dynnob/.arduino15/packages/esp32/hardware/esp32/3.3.2[0m
+esptool v5.1.0
